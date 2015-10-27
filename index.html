@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visual Weather</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
+    <script language="javascript" type="text/javascript" src="js/p5.min.js"></script>
+    <script language="javascript" src="js/p5.dom.js"></script>
     
     <script src="bower_components/modernizr/modernizr.js"></script>
-   
+    
+    
+    <style>
+    #left_panel {
+      width: 100%;
+      float: left;
+    }
+    #right_panel {
+      width: 100%;
+      float: left;
+    }
+  </style>
     
    
   </head>
@@ -19,22 +32,38 @@
       <h1><a href="#">Visual Weather</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+     
+     
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
   <section class="top-bar-section">
    
     <!-- Right Nav Section -->
+    
+    <form class="right">
+        <input type="radio" name="tempScale" value="F" checked style="color:white">Fahrenheit
+<!--<br>-->
+<input type="radio" name="tempScale" value="C"> Celsius
+</form>
+
+
+<!--
     <ul class="right">
-      <!--li class="active"><a href="#">Celsius</a></li-->
+      li class="active"><a href="#">Celsius</a></li
       <li class="has-dropdown">
         <a href="#">Scale</a>
         <ul class="dropdown">
           <li><a href="#">Fahrenheit</a></li>
+          
           <li class="active"><a href="#">Celsius</a></li>
+          
         </ul>
       </li>
     </ul>
+-->
+
+
 
     <!-- Left Nav Section -->
     <ul class="left">
@@ -57,9 +86,15 @@
        
        
        <div class="small-12 medium-8 column second-col text-center">
-           <h1>Miami</h1>
-           <h3>Sunny</h3>
-           <h3>80º with chance of showers</h3>
+       
+
+           </p><h1 id="city"></h1>
+           <h3 id="temp"></h3>
+<!--
+           <h3 id="temp-min"></h3>
+           <h3 id="temp-max"></h3>
+-->
+<!--           <h3 id="humidity"></h3>-->
        </div>
        
    </div>
@@ -78,11 +113,14 @@
    
     <!--div class="medium-6 columns"-->
       <!--div class="row collapse postfix-round"-->
-        <div class="small-9 columns">
-          <input type="text" placeholder="Find Your City">
+        <div id="left_panel" class="small-9 columns">
+
         </div>
+        
         <div class="small-3 columns">
-          <a href="#" class="button postfix">Search</a>
+            <div id="right_panel"> </div>
+<!--          <a href="#" class="button postfix">Search</a> -->
+          
         </div>
       </div>
     </div>
@@ -97,5 +135,6 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
+    <script language="javascript" type="text/javascript" src="js/sketch.js"></script>
   </body>
 </html>
