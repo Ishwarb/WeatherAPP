@@ -1,5 +1,5 @@
 var canvas;
-var base_url = "http://api.openweathermap.org/data/2.5/forecast";
+var base_url = "http://api.openweathermap.org/data/2.5/weather";
 var city_url ="?q=Miami"; 
 var app_id = "&appid=bb48464807bd02b5a455107f3daba9ea";
 var fUnits = "&units=imperial";
@@ -11,6 +11,7 @@ var cityName;
 var wind;
 var position;
 var humidity;
+
 
 
 
@@ -51,11 +52,11 @@ function gotWeather(weather) {
   //Position 0 is the first item in the list
   //each one is 3 hours apart
     console.log(weather);
-  temp = weather.list[0].main.temp;
+//  temp = weather.list[0].main.temp;
 //  temp_min = weather.list[0].main.temp_min;
 //  temp_max = weather.list[0].main.temp_max;
-  humidity = weather.list[0].main.humidity;
-
+  humidity = weather.main.humidity;
+temp = weather.main.temp;
  
     select("#city").html(cityName.value());
     var unitSelected = $('input[name=tempScale]:checked').val();
@@ -68,7 +69,6 @@ function gotWeather(weather) {
 //    select("#temp-max").html(temp_max);
     select("#humidity").html(humidity);
     
-    If 
     
     
 }
