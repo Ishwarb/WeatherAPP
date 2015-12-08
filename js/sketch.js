@@ -8,6 +8,9 @@ var temp;
 var temp_min;
 var temp_max;
 var cityName;
+var wind;
+var position;
+var humidity;
 
 
 
@@ -20,6 +23,7 @@ function setup() {
     //paddingAmount.parent('left_panel);
     searchButton.parent('right_panel');
     searchButton.mousePressed(weatherLookup);
+    wind = createVector();
 
  
 }
@@ -54,8 +58,17 @@ function gotWeather(weather) {
 
  
     select("#city").html(cityName.value());
-    select("#temp").html(temp +""+"&#8457;");
+    var unitSelected = $('input[name=tempScale]:checked').val();
+    if (unitSelected == "F") {
+        select("#temp").html(temp +""+"&#176; F");
+    } else {
+        select("#temp").html(temp +""+"&#176; C");
+    }
 //    select("#temp-min").html(temp_min);
 //    select("#temp-max").html(temp_max);
     select("#humidity").html(humidity);
+    
+    If 
+    
+    
 }
