@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visual Weather</title>
+    <title>Filmmaker's Weather App</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script language="javascript" type="text/javascript" src="js/p5.min.js"></script>
     <script language="javascript" src="js/p5.dom.js"></script>
     
-    <script src="bower_components/modernizr/modernizr.js"></script>
+<!--    <script src="bower_components/modernizr/modernizr.js"></script>-->
     
     
     <style>
@@ -29,7 +29,7 @@
   <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">Visual Weather</a></h1>
+      <h1><a href="#">Filmmaker's Weather App</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
      
@@ -48,22 +48,6 @@
 </form>
 
 
-<!--
-    <ul class="right">
-      li class="active"><a href="#">Celsius</a></li
-      <li class="has-dropdown">
-        <a href="#">Scale</a>
-        <ul class="dropdown">
-          <li><a href="#">Fahrenheit</a></li>
-          
-          <li class="active"><a href="#">Celsius</a></li>
-          
-        </ul>
-      </li>
-    </ul>
--->
-
-
 
     <!-- Left Nav Section -->
     <ul class="left">
@@ -72,29 +56,26 @@
   </section>
 </nav>
    </div>
-   <!-- class="row">
-       <div class="small-12 column" style="background: blue">
-         <p> hello</p>
-          <img src="img/Around%20Town%201.jpg" alt="Sky"
-       </div>
-   </div> -->
-   <div class="row cityText">
+ 
+   <div class="row cityText" id="canvas">
        
-       <div class="small-12 medium-4 column first-col text-center">
-           <div class="image"><img src="img/sun.png" alt="Sunny"></div>
+       <div id="area1" class="small-12 medium-6 column first-col text-center">
+           <div id="imgdiv"><img id="wimg" class="sun" src="img/sun.png" alt="Sunny"></div>
+
+      
        </div>
        
        
-       <div class="small-12 medium-8 column second-col text-center">
+       <div class="small-12 medium-6 column second-col text-center">
        
 
-           <h1 id="city"></h1>
-           <h3 id="temp"></h3>
-<!--
-           <h3 id="temp-min"></h3>
-           <h3 id="temp-max"></h3>
--->
-           <h3 id="humidity"></h3>
+           <h4 id="city"></h4>
+           <h4 id="temp"></h4>
+           <h4 id="humidity"></h4>
+           <h4 id="winDiv"></h4>
+           <h4 id="code"></h4>
+           <h5 id="recommendation"></h5>
+           
        </div>
        
    </div>
@@ -113,13 +94,22 @@
    
     <!--div class="medium-6 columns"-->
       <!--div class="row collapse postfix-round"-->
-        <div id="left_panel" class="small-9 columns">
-
+        <div class="small-4 columns">
+            <label>City
+                <input id="left_panel" type="text" placeholder="City name"/>
+            </label>        
+        </div>
+    
+        
+        <div class="small-4 columns">
+            <label>Number of days from today
+                <input id="middle_panel" type="text" placeholder="1-16"/>
+            </label>
         </div>
         
-        <div class="small-3 columns">
+        <div class="small-4 columns">
             <div id="right_panel"> </div>
-<!--          <a href="#" class="button postfix">Search</a> -->
+        
           
         </div>
       </div>

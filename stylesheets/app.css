@@ -9455,8 +9455,7 @@ th.hide-for-touch {
 
 /* line 7, ../scss/app.scss */
 .third-col {
-  background-color: red;
-  height: 200px;
+  height: 400px;
 }
 
 /* line 9, ../scss/app.scss */
@@ -9469,8 +9468,18 @@ h1 {
 }
 
 h3 {color: white;
+    background-color: skyblue
 }
 
+h4 {color: black;
+    font-weight: bold;
+    text-shadow: 5px;
+/*    background-color: skyblue;*/
+}
+
+h5 {color:white;
+    background-color: midnightblue;
+}
 /*img {
     position: absolute;
     left: 0px;
@@ -9479,6 +9488,11 @@ h3 {color: white;
 }*/
 
 .image {
+    width: 100%;
+    height: 500px;
+}
+
+.sun {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9491,8 +9505,12 @@ h3 {color: white;
 }
 
 .cityText {
-    background-image: url(../img/sky.jpg);
+    background-image: url(../img/background1.png);
     background-position: center;
+/*
+    width: 1000px;
+    height: 350px;
+*/
 }
 
 
