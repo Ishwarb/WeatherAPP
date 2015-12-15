@@ -108,7 +108,7 @@ function gotWeather(weather) {
     wind = p5.Vector.fromAngle(angle);
 
     //select("#city").html(cityName);
-    select("#city").html("In " + day + " days, " + cityName + " will feel like:");
+    select("#city").html("In " + day + " day(s), " + cityName + " will feel like:");
     var unitSelected = $('input[name=tempScale]:checked').val();
     if (unitSelected == "F") {
         select("#temp").html("Temperature: " + temp +""+"&#176; F");
